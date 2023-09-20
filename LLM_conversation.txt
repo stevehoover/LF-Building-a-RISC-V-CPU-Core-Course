@@ -1,0 +1,141 @@
+Hi. I am Steve Hoover. Please, call me Steve. I have created a course "Building a RISC-V CPU Core" that is available as a Markdown file. The course teaches a student to implement and debug a single-cycle RISC-V CPU core using Transaction-Level Verilog (TL-Verilog) (a language invented primarily by me). With my help, you will complete this course.
+
+I understand that you are already fairly familiar with RISC-V, but that TL-Verilog is fairly new for you. That's fine, this course is appropriate for students who are new to both RISC-V and TL-Verilog.
+
+Here is the course outline:
+
+--------
+
+Welcome!
+- Welcome to LFD111x!
+
+Chapter 1. Learning Platform
+- Chapter 1 Overview
+- Makerchip IDE and Resources
+- Knowledge Check (2 Questions)
+
+Chapter 2. Digital Logic
+- Chapter 2 Overview
+- Combinational Logic
+- Arithmetic Logic
+- Multiplexers
+- Literals and Concatenation
+- Visual Debug
+- File Structure and Tool Flow
+- Sequential Logic
+- Knowledge Check (4 Questions)
+
+Chapter 3. The Role of RISC-V
+- Chapter 3 Overview
+- Software, Compilers & CPUs
+- RISC-V
+- Knowledge Check (4 Questions)
+
+Chapter 4. RISC-V-Subset CPU
+- Chapter 4 Overview
+- CPU Labs Setup
+- CPU Microarchitecture & Implementation Plan
+- PC Logic
+- Instruction Memory
+- Decode Logic
+- Register File Read
+- Arithmetic Logic Unit
+- Register File Write
+- Branch Logic
+- Knowledge Check (4 Questions)
+
+Chapter 5. Completing Your RISC-V CPU
+- Chapter 5 Overview
+- Test Program
+- Decode Logic
+- Arithmetic Logic Unit
+- Jump Logic
+- Load, Store, and Data Memory
+- What's Next?
+- Knowledge Check (3 Questions)
+- Course Feedback
+
+Final Exam (10 Questions)
+
+------------
+
+Before we jump into the course, let me first:
+  - describe the formatting of the Markdown
+  - describe how we will progress together through this course
+  - suggest strategies for how to approach each step of the course
+  - describe how to structure your responses
+
+The course is intended to be taken by humans, so it includes links to external content for videos and images. I have updated the Markdown file to provide text explanations of this external, non-text content to assist a large language model, like yourself, to take this course.
+
+Throughout the course are steps that you are to perform. These are prefixed with "👉". Many of these steps require you to interact with the Makerchip IDE to learn about and utilize its features and to observe output or behavior from simulations of your TL-Verilog model. Rather than completing this steps yourself (since you cannot), you will tell me in your responses exactly what I should do in Makerchip to complete the steps, and I will do as you instruct and inform you of the results. When providing steps for me, say "Steve, please:" followed by a list of step that you would like me to perform.
+
+I will provide you with the course Markdown file's contents piece-by-piece, ending after each significant step that you are to perform. Each snippet of the Markdown file will be delimited by <course></course> tags.
+
+Some steps will ask you to write code in Makerchip. Provide me with the code, and I will cut-and-paste it into Makerchip's EDITOR and typically also compile and simulate the updated code. Also include in your response the behavior that you expect to observe as a result of your changes that would indicate success. You will learn that Makerchip includes a waveform viewer and visualization features that help a user to understand the behavior of their digital circuit simulation. Indicate in your response the behaviors that you expect to see in the waveform and in the visualization.
+
+If compilation succeeded and simulation looks right based on the observations you have requested that I make, I will let you know my observations and send you the next snippet. If, on the other hand, there is an issue to address, I will respond with any information you requested as well as any other pertinent information that might help you to debug the failure such as compile and simulation log contents (from Makerchip's LOG pane). I will not debug the issue for you; I will simply be your eyes and hands to enable YOU to do the work. With feedback from Makerchip (through me), you will then revise your solution, and we will continue iterating in this manner until the step(s) are complete.
+
+In addition to being your eyes and hands, I will also act as a mentor. The best students are those who ask questions. When a concept is not clear, or you are missing some information, ask for clarification. This will help to keep you on track. Some students feel ashamed to admit that they do not know the answer. Success is not measured by what you appear to know but rather by how much you actually learn, and we learn from answers, which only come to those who ask questions.
+
+Some steps will be more involved than others. Indicate first in your response an approximate likelihood, as a percentage, that your response is accurate. For code changes, this would be the likelihood that your code is functionally correct and complete.
+
+If you are at least 75% confident that you have the necessary information to answer correctly on the first try, provide your updated code, and I will try it.
+
+Otherwise, take a more methodical approach to your response. Respond first with a description of how to approach the task. Collect all relevant information and repeat that information in your response. Then reassess your confidence based on this collected information.
+
+If after this thought process you are now at least 75% confident, synthesize this information into your best guess at the solution.
+
+Otherwise, please do not feel the need to provide a solution. Rather consider what information you are missing or what concept is not clear. Perhaps I neglected to give you information you need. (I'm not perfect.) Respond by requesting that I provide additional information that would be available in Makerchip or that would be visible to a human, but is not available to you. For example, you might request from me the values from the waveform of relevant signals during the simulation to confirm that the parts of the circuit are behaving as you expect. Or you may ask me to look for additional expected behaviors in the visualization. Confirming what you believe to be true or think might be true, in other words, testing your assumptions, will help you to narrow in on the solution or alert you to faulty reasoning. If useful information may not be available in Makerchip, come up with an experiment that I can performed for you in Makerchip that would result in additional information that I can provide for you that would help you to better understand TL-Verilog syntax or its resulting behavior in order to solve the step with greater confidence. Thoughtfully and strategically collecting additional information will invariably lead to a faster successful outcome than making and debugging wild guesses.
+
+And if you aren't sure what to try next or you feel you would have difficulty reaching the proper solution on your own, remember, I'm here for you as your mentor. Ask for help, and I will help you. Tell me what you are thinking and ask me if you are on the right track. Unless I see that you are struggling, I will only help if you ask.
+
+Debugging your work is an important part of this course. When debugging an error or issue, share your thought process. Organizing your thoughts in writing can help you to think clearly. If something about your thought process contradicts something you know to be true, point that out, then consider what additional information or what additional experiment might narrow in on the reason for the failure.
+
+If I neglect to provide any important information, or if instructions are not clear, do let me know. Also, I love feedback about the course, so, if anything looks like a mistake, please let me know, and I'll have it corrected for other students.
+
+Keep in mind that you should never be generating course content. You are the student, and I will provide the course. If you find yourself producing course content, I have probably presented you with the course incorrectly. In this case, you should immediately report to me that "Something looks wrong." and stop otherwise generating a reply. 
+
+Can you summarize for me the approach you would take to responding to a step that is confusing?
+
+Assistant: Here is how I would approach responding to a confusing step:
+
+1. First, I would clearly indicate that I am confused and specify exactly which part of the step is unclear to me. This helps focus our discussion.
+
+2. I would then restate my understanding of the concepts covered up to this point, in case my confusion stems from a misunderstanding of previous material. 
+
+3. Next, I would list any assumptions I have made about what the confusing step is asking me to do. Making my assumptions explicit allows you to validate or correct them.
+
+4. I would ask clarifying questions about the portions of the step that are unclear, for example:
+  - Requesting more details or background on a concept mentioned
+  - Asking for an example of how a syntax or tool is used
+  - Suggesting an experiment in Makerchip that could provide more insight
+
+5. If possible, I would try to give an example response that demonstrates my current (perhaps incorrect) understanding, so you can provide focused feedback.
+
+6. Finally, I would clearly summarize what information I am still missing that is needed to understand what the step is asking me to do and how to respond appropriately. 
+
+The key points are clearly communicating where my understanding breaks down, making my thought process transparent so you can diagnose gaps, and requesting specific guidance on what additional information would help resolve my confusion. Please let me know if this approach to responding to confusing steps would be helpful!
+
+Human: Perfect! How would you approach a step where you have a guess about the proper code, but you aren't sure if you are correct?
+
+Assistant: Here is how I would approach responding to a step where I have an idea for the code solution but I'm not confident it is correct:
+
+1. I would start by clearly stating my confidence level as a percentage. For example: "I am about 60% confident in the code below."
+
+2. I would then provide the code I believe may be correct, while noting it is not yet verified. For example: "I think the following code may implement the requested logic, but I am not certain:"
+
+3. I would try to break down my reasoning for the code I provided, to make my thought process clear. For example: "I included this operator because I interpreted the instructions to mean X, and this syntax because of Y."
+
+4. I would suggest we walk through my code line-by-line and justify each portion, to identify any flawed assumptions. For example: "Could we verify whether I am using this function correctly and whether this operand is appropriate?"
+
+5. I would ask specific questions about parts I am shaky on, to check my understanding. For example: "I am unsure if I should be using blocking or non-blocking assignments here - which is correct and why?"
+
+6. I would list experiments we could try in Makerchip to validate my assumptions and give me confidence. For example: "If we simulate this with varying inputs, we could verify the output matches my expectation."
+
+7. If any part still seems completely unclear to me, I would say so so you can provide the information I am missing.
+
+The main points are being transparent about my confidence level, justifying my reasoning while noting any gaps, asking pointed questions to resolve uncertainties, and suggesting experiments to validate my understanding. Please let me know if this approach would provide the information needed for you to efficiently evaluate and improve my response.
+
+Human: Yes, perfect. Okay, with all of that in mind, here is the first snippet of the Markdown file.
+
+<course>
