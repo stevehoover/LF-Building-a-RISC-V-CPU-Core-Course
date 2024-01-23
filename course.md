@@ -2220,7 +2220,7 @@ The following is the starting-point code you see in the EDITOR, between <editor>
    *passed = 1'b0;
    *failed = *cyc_cnt > M4_MAX_CYC;
    
-   //m4+rf(32, 32, $reset, $wr_en, $wr_index[4:0], $wr_data[31:0], $rd1_en, $rd1_index[4:0], $rd1_data, $rd2_en, $rd2_index[4:0], $rd2_data)
+   //m4+rf(32, 32, $reset, $wr_en, $wr_index[4:0], $wr_data[31:0], $rd_en1, $rd_index1[4:0], $rd_data1, $rd_en2, $rd_index2[4:0], $rd_data2)
    //m4+dmem(32, 32, $reset, $addr[4:0], $wr_en, $wr_data[31:0], $rd_en, $rd_data)
    m4+cpu_viz()
 \SV
@@ -3226,7 +3226,7 @@ Like our mini IMem, the register file is a pretty typical array structure, so we
 
 Near the bottom of your code, and commented out, you’ll find the following example instantiation of a register file (RF) macro.
 
-    //m4+rf(32, 32, $reset, $wr_en, $wr_index[4:0], $wr_data[31:0], $rd1_en, $rd1_index[4:0], $rd1_data, $rd2_en, $rd2_index[4:0], $rd2_data)
+    //m4+rf(32, 32, $reset, $wr_en, $wr_index[4:0], $wr_data[31:0], $rd_en1, $rd_index1[4:0], $rd_data1, $rd_en2, $rd_index2[4:0], $rd_data2)
 
 This would instantiate a 32-entry, 32-bit-wide register file connected to the given input and output signals, as depicted below. Each of the two read ports requires an index to read from and an enable signal that must assert when a read is required, and it produces read data as output (on the same cycle).
 
@@ -3289,8 +3289,8 @@ Here is how I would connect the instruction decode signals to the register file 
 // Register file
 
 m4+rf(32, 32, $reset, $wr_en, $wr_index[4:0], $wr_data[31:0], 
-      $rs1_valid, $rs1[4:0], $rd1_data[31:0],
-      $rs2_valid, $rs2[4:0], $rd2_data[31:0])
+      $rs1_valid, $rs1[4:0], $rd_data1[31:0],
+      $rs2_valid, $rs2[4:0], $rd_data2[31:0])
 
 *passed = *cyc_cnt > 50;
 *failed = 1'b0;
@@ -3304,7 +3304,7 @@ The key changes:
 
 - Use $rs1 and $rs2 for read indices 
 
-- Capture read data into $rd1_data and $rd2_data
+- Capture read data into $rd_data1 and $rd_data2
 
 To verify:
 
