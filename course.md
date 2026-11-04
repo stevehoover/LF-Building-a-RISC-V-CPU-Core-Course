@@ -115,7 +115,7 @@ This first lab simply gives you a chance to play with the features of the Makerc
 ![alt](images/Makerchip_IDE.png)
 
 <!-- /steve
-The image above shows a screenshot of the Makerchip IDE. It shows a menu bar including project save status. It shows four active panes and a total of six tabs: EDITOR, NAV-TLV, LOG, TUTORIAL VALID, DIAGRAM, and WAVEFORM. The four active panes are: NAV-TLV showing syntax-highlighted TL-Verilog code with highlighting for errors/warnings, LOG showing the compile log, DIAGRAM showing an auto-generated logic diagram, and WAVEFORM showing a waveform viewer. A signal "$bb_sq" is highlighted in the WAVEFORM, DIAGRAM, and NAV-TLV (because it was selected by the user).
+The image above shows a screenshot of the Makerchip IDE. It shows a menu bar including project save status. It shows four tabbed views and a total of six tabs: EDITOR, NAV-TLV, LOG, TUTORIAL VALID, DIAGRAM, and WAVEFORM. The four active views are: NAV-TLV showing syntax-highlighted TL-Verilog code with highlighting for errors/warnings, LOG showing the compile log, DIAGRAM showing an auto-generated logic diagram, and WAVEFORM showing a waveform viewer. A signal "$bb_sq" is highlighted in the WAVEFORM, DIAGRAM, and NAV-TLV (because it was selected by the user).
 -->
 
 To reproduce the above screenshot, complete the following steps. (Or, if the features of Makerchip have changed, find similar steps to follow by exploring on your own.)
@@ -128,7 +128,7 @@ To reproduce the above screenshot, complete the following steps. (Or, if the fea
 
 <!-- /step -->
 
-👉 Split panes and move tabs between panes.
+👉 Split tabbed views and move tabs between them.
 
 <!-- /step -->
 
@@ -158,13 +158,13 @@ Steve, please:
 - Go to https://www.makerchip.com/
 - Click on "Examples" in the top menu bar
 - Under "Tutorials", click on "Validity Tutorial" to open it
-- In the "EDITOR" pane on the left, click the "Load Pythagorean Example" button
-- In the top right corner of the "EDITOR" pane, click the icon with four squares to split the pane horizontally into two panes
-- Click and drag the "LOG" tab from the bottom pane to the top right pane
-- Click and drag the "DIAGRAM" tab from the bottom left pane to the top left pane 
-- Use the mouse wheel to zoom in and pan around the logic diagram in the "DIAGRAM" pane
-- In the "WAVEFORM" pane, click the "Zoom In" button one or more times to zoom the waveform
-- In the "WAVEFORM" pane, click on the signal "$bb_sq" to highlight it. The signal should also highlight in the "DIAGRAM" and "NAV-TLV" panes.
+- In the "EDITOR" view on the left, click the "Load Pythagorean Example" button
+- In the top right corner of the "EDITOR" view, click the icon with four squares to split its tabbed view horizontally in two
+- Click and drag the "LOG" tab from the bottom tabbed view to the top-right one
+- Click and drag the "DIAGRAM" tab from the bottom-left tabbed view to the top-left one 
+- Use the mouse wheel to zoom in and pan around the logic diagram in the "DIAGRAM" view
+- In the "WAVEFORM" view, click the "Zoom In" button one or more times to zoom the waveform
+- In the "WAVEFORM" view, click on the signal "$bb_sq" to highlight it. The signal should also highlight in the "DIAGRAM" and "NAV-TLV" views.
 
 Let me know if you are able to follow these steps to reproduce the screenshot. I can provide more details if any part is unclear.
 -->
@@ -180,14 +180,14 @@ Here are my notes summarizing what I have learned in Chapter 1:
 
 - Makerchip is the online IDE that will be used throughout the course. It allows you to edit, compile, and simulate digital logic designs written in Transaction-Level Verilog (TL-Verilog). 
 
-- The main panes in Makerchip are:
+- The main views in Makerchip are:
   - EDITOR - for editing the TL-Verilog code 
   - NAV-TLV - a parsed version of the code that highlights errors
   - LOG - shows compile logs to check for errors
   - DIAGRAM - visualizes the logic diagram
   - WAVEFORM - shows signal waveforms over the simulation time
 
-- These views are all linked, so clicking on a signal will highlight it across panes. This helps debug from faulty behavior back to source code.
+- These views are all linked, so clicking on a signal will highlight it across views. This helps debug from faulty behavior back to source code.
 
 - The general debug flow is:
   1. Find incorrect simulation in WAVEFORM
@@ -338,7 +338,7 @@ Upon completing the previous step, the default Makerchip template code that appe
 \SV
    // Macro providing required top-level module definition, random
    // stimulus support, and Verilator config.
-   m5_makerchip_module   // (Expanded in Nav-TLV pane.)
+   m5_makerchip_module   // (Expanded in Nav-TLV view.)
 \TLV
    $reset = *reset;
    
@@ -368,7 +368,7 @@ Here are the steps to complete the Inverter lab in Makerchip:
 Steve, please:
 
 - Go to https://www.makerchip.com/
-- Click on the "Clear" button below the EDITOR pane to reset to the default template
+- Click on the "Clear" button below the EDITOR view to reset to the default template
 - Verify the first line of code is:
 \m5_TLV_version 1d: tl-x.org
 - Replace the "//..." line with: 
@@ -475,7 +475,7 @@ In the NAV-TLV tab you see the following code, delimited by <nav-tlv></nav-tlv>:
 \SV
    // Macro providing required top-level module definition, random
    // stimulus support, and Verilator config.
-   module top(input wire clk, input wire reset, input wire [31:0] cyc_cnt, output wire passed, output wire failed);    /* verilator lint_save */ /* verilator lint_off UNOPTFLAT */  bit [256:0] RW_rand_raw; bit [256+63:0] RW_rand_vect; pseudo_rand #(.WIDTH(257)) pseudo_rand (clk, reset, RW_rand_raw[256:0]); assign RW_rand_vect[256+63:0] = {RW_rand_raw[62:0], RW_rand_raw};  /* verilator lint_restore */  /* verilator lint_off WIDTH */ /* verilator lint_off UNOPTFLAT */   // (Expanded in Nav-TLV pane.)
+   module top(input wire clk, input wire reset, input wire [31:0] cyc_cnt, output wire passed, output wire failed);    /* verilator lint_save */ /* verilator lint_off UNOPTFLAT */  bit [256:0] RW_rand_raw; bit [256+63:0] RW_rand_vect; pseudo_rand #(.WIDTH(257)) pseudo_rand (clk, reset, RW_rand_raw[256:0]); assign RW_rand_vect[256+63:0] = {RW_rand_raw[62:0], RW_rand_raw};  /* verilator lint_restore */  /* verilator lint_off WIDTH */ /* verilator lint_off UNOPTFLAT */   // (Expanded in Nav-TLV view.)
 \TLV
    $reset = *reset;
 
@@ -541,7 +541,7 @@ Now:
 
 <!-- /step -->
 
-👉 Find the logic expression for your inverter in the DIAGRAM in a mouse-over pop-up. Select the expression in the DIAGRAM and observe the highlighting in other panes.
+👉 Find the logic expression for your inverter in the DIAGRAM in a mouse-over pop-up. Select the expression in the DIAGRAM and observe the highlighting in other views.
 
 <!-- /hide -->
 
@@ -666,7 +666,7 @@ $out = $in1 ^ $in2; // XOR gate
   - Check for errors in the LOG
   - Verify the logic function in the WAVEFORM
   - View the gate diagram in the DIAGRAM
-  - Click the logic gate in the DIAGRAM to highlight across panes
+  - Click the logic gate in the DIAGRAM to highlight across views
 
 Let me know if you are able to follow these steps to try each logic expression successfully. Please confirm that you observe the expected logic function for each case. Let me know if any part is unclear!
 -->
@@ -1252,7 +1252,7 @@ Let me know if you are able to add these lines without any issues. I would expec
 
 <!-- /split -->
 
-👉 You should now see a calculator in the VIZ pane. If necessary, debug the LOG. In NAV-TLV the `m4_include_lib` line should have turned into a comment, and the `m4+calc_viz()` macro instantiation should have expanded to a block of `\viz_js` code.
+👉 You should now see a calculator in the VIZ view. If necessary, debug the LOG. In NAV-TLV the `m4_include_lib` line should have turned into a comment, and the `m4+calc_viz()` macro instantiation should have expanded to a block of `\viz_js` code.
 
 <!-- /step -->
 
@@ -1264,7 +1264,7 @@ Let me know if you are able to add these lines without any issues. I would expec
 
 <!-- /step -->
 
-Typically, you would create your own custom visualizations as you develop your circuit, so you can see the big picture simulation behavior more easily. In this course, you will focus on the hardware logic, and we provide visualization for you. If you are curious, though, you can see the visualization code in the NAV-TLV pane, where macros are expanded.
+Typically, you would create your own custom visualizations as you develop your circuit, so you can see the big picture simulation behavior more easily. In this course, you will focus on the hardware logic, and we provide visualization for you. If you are curious, though, you can see the visualization code in the NAV-TLV view, where macros are expanded.
 
 <!-- /hide -->
 
@@ -1279,9 +1279,9 @@ Those three steps are all actions to perform in Makerchip. Please do them for me
 
 I expect to observe:
 
-- a calculator in the VIZ pane
+- a calculator in the VIZ view
 
-- m4+ macros have been substituted, and \viz_js code is now visible in the NAV-TLV pane.
+- m4+ macros have been substituted, and \viz_js code is now visible in the NAV-TLV view.
 
 - VIZ shows the calculator performing operations in hexadecimal as I step through the simulation, corresponding to the WAVEFORM.
 -->
@@ -1406,7 +1406,7 @@ TL-Verilog features are used to define the logic within a (System)Verilog module
           // LOG.
           //
           // To see the expansion of this macro, look in the NAV-TLV
-          // pane. This macro also provides a random vector that can
+          // view. This macro also provides a random vector that can
           // be used for stimulus and it provides some Verilator
           // configuration.
     \TLV
@@ -2205,7 +2205,7 @@ The following is the starting-point code you see in the EDITOR, between <editor>
 
 
 \SV
-   m4_makerchip_module   // (Expanded in Nav-TLV pane.)
+   m4_makerchip_module   // (Expanded in Nav-TLV view.)
    /* verilator lint_on WIDTH */
 \TLV
    
@@ -2259,7 +2259,7 @@ CPUs come in many flavors, from small microcontrollers, optimized for small area
 
 Our CPU will fully execute one instruction with each new clock cycle. Doing all of this work within a single clock cycle is only possible if the clock is running relatively slowly, which is our assumption.
 
-We’ll start by implementing enough of the CPU to execute our test program. As you add each new piece of functionality, you will see in the VIZ pane the behavior you implemented, with more and more of the test program executing correctly until it is successfully summing numbers from one to nine. Then we’ll go back to implement support for the bulk of the RV32I instruction set.
+We’ll start by implementing enough of the CPU to execute our test program. As you add each new piece of functionality, you will see in the VIZ view the behavior you implemented, with more and more of the test program executing correctly until it is successfully summing numbers from one to nine. Then we’ll go back to implement support for the bulk of the RV32I instruction set.
 
 Let’s look at the components of our CPU, following the flow of an instruction through the logic. This is also roughly the order in which we will implement the logic.
 
