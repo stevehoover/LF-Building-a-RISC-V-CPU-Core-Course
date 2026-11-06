@@ -115,7 +115,7 @@ This first lab simply gives you a chance to play with the features of the Makerc
 ![alt](images/Makerchip_IDE.png)
 
 <!-- /steve
-The image above shows a screenshot of the Makerchip IDE. It shows a menu bar including project save status. It shows four tabbed views and a total of six tabs: EDITOR, NAV-TLV, LOG, TUTORIAL VALID, DIAGRAM, and WAVEFORM. The four active views are: NAV-TLV showing syntax-highlighted TL-Verilog code with highlighting for errors/warnings, LOG showing the compile log, DIAGRAM showing an auto-generated logic diagram, and WAVEFORM showing a waveform viewer. A signal "$bb_sq" is highlighted in the WAVEFORM, DIAGRAM, and NAV-TLV (because it was selected by the user).
+The image above shows a screenshot of the Makerchip IDE. It shows a menu bar including project save status. It shows four tabbed panes and a total of six tabs: EDITOR, NAV-TLV, LOG, TUTORIAL VALID, DIAGRAM, and WAVEFORM. The four active views are: NAV-TLV showing syntax-highlighted TL-Verilog code with highlighting for errors/warnings, LOG showing the compile log, DIAGRAM showing an auto-generated logic diagram, and WAVEFORM showing a waveform viewer. A signal "$bb_sq" is highlighted in the WAVEFORM, DIAGRAM, and NAV-TLV (because it was selected by the user).
 -->
 
 To reproduce the above screenshot, complete the following steps. (Or, if the features of Makerchip have changed, find similar steps to follow by exploring on your own.)
@@ -128,7 +128,7 @@ To reproduce the above screenshot, complete the following steps. (Or, if the fea
 
 <!-- /step -->
 
-👉 Split tabbed views and move tabs between them.
+👉 Split tabbed panes and move tabs between them: drag a tab onto a tab bar to move it, or to the edge of a view to split that tabbed pane.
 
 <!-- /step -->
 
@@ -159,9 +159,8 @@ Steve, please:
 - Click on "Examples" in the top menu bar
 - Under "Tutorials", click on "Validity Tutorial" to open it
 - In the "EDITOR" view on the left, click the "Load Pythagorean Example" button
-- In the top right corner of the "EDITOR" view, click the icon with four squares to split its tabbed view horizontally in two
-- Click and drag the "LOG" tab from the bottom tabbed view to the top-right one
-- Click and drag the "DIAGRAM" tab from the bottom-left tabbed view to the top-left one 
+- Drag the "LOG" tab to the bottom edge of the "EDITOR" view to split the left tabbed pane, placing "LOG" below
+- Drag the "WAVEFORM" tab to the bottom edge of the "DIAGRAM" view to split the right tabbed pane, placing "WAVEFORM" below
 - Use the mouse wheel to zoom in and pan around the logic diagram in the "DIAGRAM" view
 - In the "WAVEFORM" view, click the "Zoom In" button one or more times to zoom the waveform
 - In the "WAVEFORM" view, click on the signal "$bb_sq" to highlight it. The signal should also highlight in the "DIAGRAM" and "NAV-TLV" views.
